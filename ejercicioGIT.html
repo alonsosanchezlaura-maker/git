@@ -93,7 +93,16 @@
                 </li>
                 <li>
                     <h3>¿Cuales son los pasos para conectar git con github?</h3>
-                    [Pon tu respuesta]
+                    <p>1.Genera una clave SSH (para evitar poner tu usuario y contraseña cada vez que empujes cambios):</p>
+                    <p>ssh-keygen -t rsa -b 4096 -C "tuemail@dominio.com"</p>
+                    <p>2.Agrega la clave SSH al agente:</p>
+                    <p>eval "$(ssh-agent -s)"<br/>ssh-add ~/.ssh/id_rsa</p>
+                    <p>3.Copia la clave pública:</p>
+                    <p>cat ~/.ssh/id_rsa.pub</p>
+                    <p>4.Pega la clave SSH en GitHub: Ve a GitHub -> Configuración -> SSH and GPG keys -> Nueva clave SSH.</p>
+                    <p>5.Clona un repositorio usando SSH:</p>
+                    <p>git clone git@github.com:usuario/repositorio.git</p>
+
                 </li>
                 <li>
                     <h3>¿Cómo puedo crear un alias en git?</h3>
